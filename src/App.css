@@ -15,9 +15,9 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 32vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -28,6 +28,9 @@
   color: #61dafb;
 }
 
+.Banner-images {
+  max-height: 32vh;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
