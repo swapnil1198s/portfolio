@@ -7,7 +7,12 @@ import skull_guy from './skull_guy.gif';
 import './App.css';
 import Banner from './Banner';
 import DisplayBoard from './DisplayBoard';
+import Bio from './Bio';
+import { useState } from 'react';
+
 function App() {
+  const [state, setState] = useState('slider');
+
   return (
     <div className="App">
       
@@ -20,7 +25,12 @@ function App() {
         <img className='Banner-images' src={skull_guy} alt="Heman villain" />
       </header>
       <Banner />
-      <DisplayBoard/>
+      {state === 'slider' && (
+        <DisplayBoard displayBio={() => setState('bio') } />
+      )}
+      {state === 'bio' && (
+        <Bio displaySlides = {() => setState('slider')}/>
+      )}
     </div>
   );
 }

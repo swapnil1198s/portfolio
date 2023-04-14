@@ -3,7 +3,7 @@ import './Banner.css';
 function Banner(){
     return(
         <div className='Banner-general'>
-            <h1>~ The Happy Monkey Universe ~</h1>
+            <h1>~ A Happy Monkey Universe ~</h1>
         </div>
     )
 }

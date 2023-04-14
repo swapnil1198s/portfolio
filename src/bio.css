@@ -1,0 +1,37 @@
+.bio_container{
+    min-height: 28vh;
+    min-width: 20vh;
+    background-color: aliceblue;
+    text-align: left;
+}
+
+.bio_img{
+    max-width: 20%;
+    display: inline-block;
+    margin-top: 6vh;
+    margin-left: 3vh;
+}
+
+.bio_txt{
+    font-size: 2vh;
+    margin-left: 4vh;
+}
+.home_btn{
+    position: fixed;
+    top:auto;
+    left: 0;
+    border: 0.4vh solid black;
+}
+
+/* .parent {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  .child {
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  } */

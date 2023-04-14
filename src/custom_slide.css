@@ -24,7 +24,7 @@
     margin-top: 0.5vh;
 }
 
-a:link, a:visited {
+a:link, a:visited, a:hover, span:hover {
   color: white;
   cursor:pointer;
   text-decoration: none;
