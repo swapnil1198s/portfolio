@@ -1,1 +1,1 @@
-#React project for portfolio, creative output, and games.
+This React project is under development to house interesting content that I create.
