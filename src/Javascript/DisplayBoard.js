@@ -1,14 +1,14 @@
 import React from "react";
 import 'react-slideshow-image/dist/styles.css';
 import { Slide } from 'react-slideshow-image';
-import game_image from './images/2d_game_screenshot.png'
-import poetry_bg from './images/poetry_bg.jpeg'
-import './custom_slide.css';
+import poetry_bg from '../images/poetry_bg.jpeg'
+import game_image from '../images/2d_game_screenshot.png'
+import '../Stylesheets/custom_slide.css';
 
 function DisplayBoard(props){
     const images = [
         game_image,
-        poetry_bg,
+        ,
         "https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     ];
     

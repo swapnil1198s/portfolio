@@ -1,7 +1,7 @@
 import React from "react";
-import './bio.css';
-import ss_img from './images/ss_smiling.jpg'
-import home_img from './images/home.png'
+import '../Stylesheets/bio.css';
+import ss_img from '../images/ss_smiling.jpg'
+import home_img from '../images/home.png'
 function Bio(props){
     return(
         <div className="bio_container">
