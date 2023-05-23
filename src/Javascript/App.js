@@ -6,6 +6,7 @@ import spaceship from '../images/spaceship.gif';
 import skull_guy from '../images/skull_guy.gif';
 import '../Stylesheets/App.css';
 import Banner from './Banner';
+import IntroText from './IntroText';
 import DisplayBoard from './DisplayBoard';
 import Bio from './Bio';
 import { useState } from 'react';
@@ -25,6 +26,7 @@ function App() {
         <img className='Banner-images' src={skull_guy} alt="Heman villain" />
       </header>
       <Banner />
+      <IntroText/>
       {/* {state === 'slider' && (
         <DisplayBoard displayBio={() => setState('bio') } />
       )}

@@ -1,0 +1,7 @@
+.intro_text{
+    width: 70%;
+    margin: 3vh auto;
+    padding: 1vh;
+    background-color: rgb(255, 248, 153);
+    border-radius: 2vh;
+}
