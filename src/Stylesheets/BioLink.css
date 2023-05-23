@@ -1,0 +1,17 @@
+.BioLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    background-color: rgb(250, 109, 109);
+    margin-left: 3%;
+    padding: 1vh;
+    border-radius: 2vh;
+}
+
+.link h2 {
+    margin: 0;
+    color: white;
+}

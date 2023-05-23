@@ -9,6 +9,7 @@ import Banner from './Banner';
 import IntroText from './IntroText';
 import DisplayBoard from './DisplayBoard';
 import Bio from './Bio';
+import BioLink from './BioLink'
 import { useState } from 'react';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       </header>
       <Banner />
       <IntroText/>
+      <BioLink/>
       {/* {state === 'slider' && (
         <DisplayBoard displayBio={() => setState('bio') } />
       )}
