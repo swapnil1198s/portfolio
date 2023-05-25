@@ -1,7 +1,21 @@
 .intro_text{
-    width: 70%;
+    width: 45%;
     margin: 3vh auto;
-    padding: 1vh;
-    background-color: rgb(255, 248, 153);
+    padding: 1px;
+    background-color: black;
     border-radius: 2vh;
+    color: white;
+    font-weight: 500;
+}
+
+.intro_text p{
+    font-size: small;
+}
+.intro_text_uni {
+    width: 100%;
+    background-image: url('../images/uni.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    padding: 5vh;
 }

@@ -10,6 +10,7 @@ import IntroText from './IntroText';
 import DisplayBoard from './DisplayBoard';
 import Bio from './Bio';
 import BioLink from './BioLink'
+import ContentHouse from './ContentHouse';
 import { useState } from 'react';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Banner />
       <IntroText/>
       <BioLink/>
+      <ContentHouse/>
       {/* {state === 'slider' && (
         <DisplayBoard displayBio={() => setState('bio') } />
       )}
