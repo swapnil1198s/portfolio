@@ -12,7 +12,7 @@
     font-size: small;
 }
 .intro_text_uni {
-    width: 100%;
+    width: auto;
     background-image: url('../images/uni.jpeg');
     background-repeat: no-repeat;
     background-size:cover;

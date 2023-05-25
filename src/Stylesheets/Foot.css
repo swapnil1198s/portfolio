@@ -1,0 +1,66 @@
+.foot{
+    width: auto;
+    height: 25vh;
+    background-image: url('../images/nightsky.jpeg') ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    margin-top: 3vh;
+    padding: 5vh;
+}
+
+.a_few_words {
+    color: white;
+    font-size: 3vh;
+    font-weight: 500;
+}
+
+.digital_footprint{
+    display: flex;
+    justify-content: center;
+    
+}
+.social{
+    background-color: white;
+    padding: 1vh 2vh;
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+    border-radius: 20vh;
+}
+
+a{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.social p{
+    color: rgb(49, 49, 49);
+    font-size: 2vh;
+    margin: 0;
+}
+
+#github_icon{
+    width: 5vh;
+    background-image: url('../images/icons/github.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#email_icon{
+    width: 5vh;
+    background-image: url('../images/icons/gmail.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 1vh;
+}
+#LinkedIn_icon{
+    width: 5vh;
+    background-image: url('../images/icons/linkedin.png') ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
