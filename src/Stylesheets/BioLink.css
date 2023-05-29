@@ -10,6 +10,7 @@
     margin-left: 3%;
     padding: 1vh;
     border-radius: 2vh;
+    cursor: pointer;
 }
 
 .link h3 {

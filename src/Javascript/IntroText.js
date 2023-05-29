@@ -6,9 +6,9 @@ function IntroText(){
         <div className="intro_text_uni">
             <div className="intro_text">
                 <p>
-                    Welcome to the Happy Monkey Universe! Here you can find a collection of creative<br/> and 
-                    professional work done by the monkey that created this website. You can<br/> read poems, 
-                    play games, learn about interesting topics, or<br/> browse an assortment of software. 
+                    Welcome to the Happy Monkey Universe! Here you can find a collection of creative and 
+                    professional work done by the monkey that created this website. You can read poems, 
+                    play games, learn about interesting topics, or browse an assortment of handcrafted software. 
                 </p>
             </div>
         </div>

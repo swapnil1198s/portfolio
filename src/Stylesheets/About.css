@@ -1,0 +1,40 @@
+.about_heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.work-text{
+    font-size: 4vh;
+    font-weight: 550;
+    margin: 3vh 5vh;
+}
+
+.my-line{
+    width: 30vh;
+    height: 1px;
+    background-color: rgb(18, 18, 18);
+}
+
+.about_body{
+    width: auto;
+    height: 65vh;
+    background-image: url('../images/about_uni_bg.jpeg');
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.home_btn{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0vh 2vh;
+    position: inherit;
+    width: 15%;
+}
+
+.home_btn p{
+    font-size: 2vh;
+}

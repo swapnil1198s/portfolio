@@ -6,16 +6,16 @@ import spaceship from '../images/spaceship.gif';
 import skull_guy from '../images/skull_guy.gif';
 import '../Stylesheets/App.css';
 import Banner from './Banner';
-import IntroText from './IntroText';
-import DisplayBoard from './DisplayBoard';
-import Bio from './Bio';
-import BioLink from './BioLink'
-import ContentHouse from './ContentHouse';
-import Foot from './Foot';
+import Home from './Home';
+import About from './About'
+
 import { useState } from 'react';
 
 function App() {
-  const [state, setState] = useState('slider');
+  const [state, setState] = useState('home');
+  const changeState = (newState) => {
+    setState(newState);
+  }
 
   return (
     <div className="App">
@@ -29,10 +29,8 @@ function App() {
         <img className='Banner-images' src={skull_guy} alt="Heman villain" />
       </header>
       <Banner />
-      <IntroText/>
-      <BioLink/>
-      <ContentHouse/>
-      <Foot/>
+      {state === 'home' && (<Home setState={setState}/>)} 
+      {(state === 'bio') && (<About setState={setState}/>)}
       {/* {state === 'slider' && (
         <DisplayBoard displayBio={() => setState('bio') } />
       )}
