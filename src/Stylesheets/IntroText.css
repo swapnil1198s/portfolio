@@ -2,10 +2,11 @@
     width: 45%;
     margin: 3vh auto;
     padding: 1px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1vh black solid;
     border-radius: 2vh;
     color: white;
-    font-weight: 500;
+    font-weight: 550;
 }
 
 .intro_text p{

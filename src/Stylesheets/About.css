@@ -46,11 +46,13 @@
 }
 .bg_text{
     color: white;
-    background-color: rgba(128, 128, 128, 0.401);
+    background-color: rgba(0, 0, 0, 0.6);
     margin: 2vh;
     padding: 1vh;
     font-size: 2vh;
-    font-weight:450;
+    font-weight:550;
+    border: 1vh solid rgba(0, 0, 0, 0.507);
+    border-radius: 5%;
 }
 
 .pic_cont{
@@ -62,5 +64,6 @@
 .bg_pic{
     max-width: 80%;
     max-height: 100%;
-    border: 1vh solid rgb(2, 132, 207);
+    border: 1vh solid rgba(2, 132, 207, 0.545);
+    border-radius: 5%;
 }
