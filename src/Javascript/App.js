@@ -8,6 +8,7 @@ import '../Stylesheets/App.css';
 import Banner from './Banner';
 import Home from './Home';
 import About from './About'
+import Foot from './Foot';
 
 import { useState } from 'react';
 
@@ -31,12 +32,8 @@ function App() {
       <Banner />
       {state === 'home' && (<Home setState={setState}/>)} 
       {(state === 'bio') && (<About setState={setState}/>)}
-      {/* {state === 'slider' && (
-        <DisplayBoard displayBio={() => setState('bio') } />
-      )}
-      {state === 'bio' && (
-        <Bio displaySlides = {() => setState('slider')}/>
-      )} */}
+
+      <Foot/>
     </div>
   );
 }

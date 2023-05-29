@@ -13,7 +13,6 @@ function Home({setState}){
             <IntroText/>
             <BioLink setState = {setState}/>
             <ContentHouse setState = {setState}/>
-            <Foot/>
         </div>
     )
 }

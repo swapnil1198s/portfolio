@@ -30,11 +30,37 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    padding: 0vh 2vh;
+    padding: 1vh 1vh;
     position: inherit;
-    width: 15%;
+    width: 4vh;
 }
 
 .home_btn p{
     font-size: 2vh;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.bg_text{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.401);
+    margin: 2vh;
+    padding: 1vh;
+    font-size: 2vh;
+    font-weight:450;
+}
+
+.pic_cont{
+    max-width: 30%;
+    max-height: 55vh;
+    margin: 2vh;
+}
+
+.bg_pic{
+    max-width: 80%;
+    max-height: 100%;
+    border: 1vh solid rgb(2, 132, 207);
 }
