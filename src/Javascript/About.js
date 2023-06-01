@@ -2,6 +2,8 @@ import React from "react";
 import '../Stylesheets/About.css'
 import {FaArrowLeft} from 'react-icons/fa'
 import profile_pic from '../images/ss_coffee_shop.jpeg'
+import resume from '../documents/Resume.pdf'
+import resume_pic from '../images/resume_pic.png'
 
 
 function About({setState}){
@@ -21,11 +23,27 @@ function About({setState}){
                 </div>
                 <div className="background">
                     <div className="bg_text">
-                        Hi! I am Swapnil Srivastava. I am in the final months of my MS in Computer Science program at Clemson University.
+                        <p>Hi! I am Swapnil Srivastava. I aspire to gain the skills that will enable me to start contributing towards the Space Race. 
+                        However, I have a long way to go. Currently, I am finishing up the Masters in Computer Science program at Clemson University. 
+                        As the next chapter of life begins, I would love to work on some robots or the revolutionary AI technology. 
+                        So far, I have five years of experience in Software Development. I would say that I am well versed in CS fundamentals, Full stack development, 
+                        Human-Centered Computing, Software Specification, Testing, and Data Structures. Passionate about advancing the physical and psychological capacity of human endeavors through technology. 
+                        Fueled by ambition and driven by goals.<br/> Staying true to the following words by my mother:<br/>
+                        "Do not find purpose in selfish endeavors. Give yourself up to service for others. Then you will find true success."
+                        </p>
                     </div>
                     <div className="pic_cont">
                         <img className="bg_pic" src={profile_pic}/>
+                        <div className="name">
+                            <p>Swapnil <br/> Srivastava</p>
+                        </div>
                     </div>
+                </div>
+                <div className="resume">
+                    <a href={resume} download>
+                        <img src={resume_pic}/>
+                    </a>
+                            Download Resume
                 </div>
             </div>
         </div>

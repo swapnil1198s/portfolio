@@ -20,15 +20,6 @@ function App() {
 
   return (
     <div className="App">
-      
-      <header className="App-header">
-        <img className='Banner-images' src={spaceship} alt="Spaceship" />
-        <img className='Banner-images' src={wolf} alt="wolf" />
-        <img className='Banner-images' src={happy} alt="happy" />
-        <img className='Banner-images' src={monkey} alt="logo" />
-        <img className='Banner-images' src={kid_goku} alt="kid goku" />
-        <img className='Banner-images' src={skull_guy} alt="Heman villain" />
-      </header>
       <Banner />
       {state === 'home' && (<Home setState={setState}/>)} 
       {(state === 'bio') && (<About setState={setState}/>)}

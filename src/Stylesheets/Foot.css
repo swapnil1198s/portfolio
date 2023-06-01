@@ -1,17 +1,19 @@
 .foot{
     width: auto;
-    height: 25vh;
+    padding: 5vh;
+    margin: 0;
     background-image: url('../images/nightsky.jpeg') ;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
-    padding: 5vh;
+    align-items: center;
 }
 
-.a_few_words {
+.a_few_words p{
     color: white;
     font-size: 3vh;
     font-weight: 500;
+    margin: 0;
 }
 
 .digital_footprint{
