@@ -52,17 +52,18 @@
     font-weight:550;
     border: 1vh solid rgba(255, 255, 255, 0.7);
     border-radius: 5vh;
+    text-align: left;
 }
 
 .bg_text p{
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     padding: 1vh;
+    background-color: black;
 }
 
 .pic_cont{
     max-width: 30%;
-    max-height: 55vh;
     margin: 2vh;
 }
 
@@ -92,10 +93,11 @@
 }
 .resume{
     cursor: pointer;
-    max-width: 30%;
+    max-width: 100%;
     color:white;
     padding: 1vh;
+    font-weight: bold;
 }
 .resume img{
-    width: 40%;
+    width: 80%;
 }
