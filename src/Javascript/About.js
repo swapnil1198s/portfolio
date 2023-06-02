@@ -17,21 +17,39 @@ function About({setState}){
                 <div ></div>
                 <div className="my-line"></div>
             </div> */}
-            <div className="about_body" >
-                <div className="home_btn" onClick={()=>setState('home')}>
+            <div className="home_btn" onClick={()=>setState('home')}>
                     <FaArrowLeft/>
                 </div>
+            <div className="about_body" >
+                
                 <div className="background">
-                    <div className="bg_text">
-                        <p>Hi! I am Swapnil Srivastava. I aspire to gain the skills that will enable me to start contributing towards the Space Race. 
-                        However, I have a long way to go. Currently, I am finishing up the Masters in Computer Science program at Clemson University. 
-                        As the next chapter of life begins, I would love to work on some robots or the revolutionary AI technology. 
-                        So far, I have five years of experience in Software Development. I would say that I am well versed in CS fundamentals, Full stack development, 
-                        Human-Centered Computing, Software Specification, Testing, and Data Structures. Passionate about advancing the physical and psychological capacity of human endeavors through technology. 
-                        Fueled by ambition and driven by goals.<br/> Staying true to the following words by my mother:<br/>
-                        "Do not find purpose in selfish endeavors. Give yourself up to service for others. Then you will find true success."
-                        </p>
+                    <div className="words">
+                        <div className="bg_text_cont">
+                            <div className="bg_text">
+                                <h1 className="bg_headings">My Purpose</h1>
+                                <p>
+                                    Each individual has varying pusposes for why they do things. One of my purposes in life is to contribute 
+                                    to <b>Space Exploration</b>. However, before that one must become able enough to have a meaningful contribution.
+                                    This website and many other things that I do are done with the intent of cultivating skills such that my individual capability is worthy of even being considered.
+                                    When it is in accordance with the Universe's plans, I will have to face the opportunity to act out the final chapter of this purpose. 
+                                    Which is to be included in our efforts of becoming a Space Sailing species.
+                                </p>
+                                <h1 className="bg_headings">The Current Goal</h1>
+                                <p>
+                                    Since my strengths are Software Enginnering, Human-Centered Computing, and Full-Stack development, I want to get experience with some live and new projects.
+                                    The goal is to get some experience with large software projects such that I can deepen the knowledge needed for 
+                                    good software architecture, development, and deployment. 
+                                </p>
+                            </div>
+                        </div>
+                        <div className="se_cont">
+                            <div className="se_skills">
+                                <h1 className="bg_headings">Software Engineering Skills</h1>
+                            </div>
+                        </div>
                     </div>
+                    
+                    
                     <div className="pic_cont">
                         <img className="bg_pic" src={profile_pic}/>
                         <div className="name">
@@ -44,9 +62,6 @@ function About({setState}){
                             <p>Download Resume</p>
                         </div>
                     </div>
-                </div>
-                <div className="resources">
-                    
                 </div>
             </div>
         </div>
