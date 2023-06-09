@@ -65,7 +65,7 @@
     border: 1vh solid rgba(0, 0, 0, 0.7);
     border-radius: 5vh;
     text-align: left;
-    height: 50%;
+    height: 40%;
 }
 .bg_text{
     color: white;
@@ -143,7 +143,7 @@
 
 .se_cont{
     background-color: rgba(195, 178, 0, 0.6);
-    margin: 5vh 0vh;
+    margin: 5vh 2vh;
     padding: 2vh;
     font-size: calc(8px + 0.8vw);
     font-weight:550;

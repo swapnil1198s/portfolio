@@ -1,5 +1,7 @@
 import React from "react";
 import '../Stylesheets/ContentHouse.css'
+import ContentBox from "./ContentBox";
+
 function ContentHouse(){
     return(
         <div >
@@ -11,27 +13,9 @@ function ContentHouse(){
                 <div className="my-line"></div>
             </div>
             <div className="content-house">
-                <div className="content-box" id="c1">
-                    <h2>
-                        Creative Work
-                    </h2>
-                    <div className="my-line"></div>
-                    <p>Blah Blah </p>
-                </div>
-                <div className="content-box" id="c2">
-                    <h2>
-                        Software
-                    </h2>
-                    <div className="my-line"></div>
-                    <p>Blah Blah </p>
-                </div>
-                <div className="content-box" id="c3">
-                    <h2>
-                        Publications
-                    </h2>
-                    <div className="my-line"></div>
-                    <p>Blah Blah </p>
-                </div>
+                <ContentBox heading="Creative Work" expandedContent="Expanded" collapsedContent = "Click to Expand" backgroundColor="rgb(201, 251, 206)"/>
+                <ContentBox heading="Software" expandedContent="Expanded" collapsedContent = "Click to Expand"  backgroundColor="rgb(238, 201, 251)"/>
+                <ContentBox heading="Publications" expandedContent="Expanded" collapsedContent = "Click to Expand" backgroundColor="rgb(166, 221, 249)"/>
             </div>
         </div>
     )

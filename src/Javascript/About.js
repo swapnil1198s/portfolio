@@ -40,6 +40,7 @@ function About({setState}){
                                     The goal is to get some experience with large software projects such that I can deepen the knowledge needed for 
                                     good software architecture, development, and deployment. 
                                 </p>
+                                <h1 className="bg_headings">My Interests</h1>
                             </div>
                         </div>
                         <div className="se_cont">
