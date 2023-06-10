@@ -22,10 +22,9 @@
     background-color: grey;
 }
 
-.content_box div{
+.content_box{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin:2vh;
     text-align: center;
 }
 

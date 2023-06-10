@@ -1,7 +1,5 @@
 import React from "react";
 import IntroText from './IntroText';
-import DisplayBoard from './DisplayBoard';
-import Bio from './Bio';
 import BioLink from './BioLink'
 import ContentHouse from './ContentHouse';
 import Foot from './Foot';

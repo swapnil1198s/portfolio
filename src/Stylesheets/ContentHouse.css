@@ -25,3 +25,20 @@
     height: 1px;
     background-color: rgb(18, 18, 18);
 }
+
+.publication_item{
+    font-size: 2vh;
+    margin: 2vh;
+}
+.publication_item p{
+    font-size: 1.5vh;
+    text-align: left;
+}
+.publication_cont{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.publication_item img{
+    max-height: 30vh;
+}

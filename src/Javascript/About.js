@@ -57,10 +57,10 @@ function About({setState}){
                             <p>Swapnil <br/> Srivastava</p>
                         </div>
                         <div className="resume">
-                            <a href={resume} download>
+                            <a href={resume}>
                                 <img src={resume_pic}/>
                             </a>
-                            <p>Download Resume</p>
+                            <p>Resume</p>
                         </div>
                     </div>
                 </div>
