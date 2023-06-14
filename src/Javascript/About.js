@@ -1,7 +1,7 @@
 import React from "react";
 import '../Stylesheets/About.css'
 import {FaArrowLeft} from 'react-icons/fa'
-import profile_pic from '../images/ss_coffee_shop.jpeg'
+import profile_pic from '../images/ss_smiling.jpg'
 import resume from '../documents/Resume.pdf'
 import resume_pic from '../images/resume_pic.png'
 

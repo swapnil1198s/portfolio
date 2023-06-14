@@ -1,7 +1,7 @@
 .content_box{
     border: 1px solid white;
     border-radius: 10px;
-    margin: 3vh;
+    margin: 3vw;
     transition: all 0.5s ;
     font-weight: bolder;
 }
@@ -9,11 +9,11 @@
   cursor: pointer;
 }
 .content_box.expanded {
-  height: 50vh;
+  height: 50vw;
   width: 70%;
 }
 .content_box.collapsed {
-  height: 20vh;
+  height: 20vw;
   width: 25%;
 }
 .content_box .my_line {
@@ -24,12 +24,51 @@
 
 .content_box{
     display: block;
-    margin:2vh;
+    margin:2vw;
     text-align: center;
 }
 
 .content_box h2 {
-    font-size: 3vh;
+    font-size: 3vw;
     font-weight: 500;
-    margin-bottom: 1vh;
+    margin-bottom: 1vw;
+}
+/*Smartphone styles*/
+@media(max-width:650px){
+  .content_box{
+      border: 1px solid white;
+      border-radius: 10px;
+      margin: 3vw;
+      transition: all 0.5s ;
+      font-weight: bolder;
+  }
+  .content_box:hover{
+    cursor: pointer;
+  }
+  .content_box.expanded {
+    height: 50vw;
+    width: 70%;
+  }
+  .content_box.collapsed {
+    height: 20vw;
+    width: 70%;
+  }
+  .content_box .my_line {
+      width: 100%;
+      height: 2px;
+      background-color: grey;
+  }
+
+  .content_box{
+      display: block;
+      margin:2vw;
+      text-align: center;
+  }
+
+  .content_box h2 {
+      font-size: 3vw;
+      font-weight: 500;
+      margin-bottom: 1vw;
+  }
+
 }

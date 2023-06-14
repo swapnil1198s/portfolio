@@ -1,10 +1,10 @@
 .intro_text{
     width: 45%;
-    margin: 3vh auto;
-    padding: 1vh;
+    margin: 3vw auto;
+    padding: 1vw;
     background-color: rgba(0, 0, 0, 0.71);
-    border: 1vh black solid;
-    border-radius: 2vh;
+    border: 1vw black solid;
+    border-radius: 2vw;
     color: white;
     font-weight: 550;
 }
@@ -23,5 +23,36 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    padding: 5vh;
+    padding: 5vw;
+}
+
+/*Smartphone styles*/
+@media (max-width:650px){
+    .intro_text{
+        width: 45%;
+        margin: 3vw auto;
+        padding: 1vw;
+        background-color: rgba(0, 0, 0, 0.71);
+        border: 1vw black solid;
+        border-radius: 2vw;
+        color: white;
+        font-weight: 550;
+    }
+    
+    .intro_text:hover{
+        background-color:skyblue;
+        color: black;
+    }
+    
+    .intro_text p{
+        font-size: 10px;
+    }
+    .intro_text_uni {
+        width: auto;
+        background-image: url('../images/uni.jpeg');
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position: center;
+        padding: 5vw;
+    }
 }

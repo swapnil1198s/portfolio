@@ -1,6 +1,6 @@
 .bio_container{
-    min-height: 28vh;
-    min-width: 20vh;
+    min-height: 28vw;
+    min-width: 20vw;
     background-color: aliceblue;
     text-align: left;
 }
@@ -8,17 +8,44 @@
 .bio_img{
     max-width: 20%;
     display: inline-block;
-    margin-top: 6vh;
-    margin-left: 3vh;
+    margin-top: 6vw;
+    margin-left: 3vw;
 }
 
 .bio_txt{
-    font-size: 2vh;
-    margin-left: 4vh;
+    font-size: 2vw;
+    margin-left: 4vw;
 }
 .home_btn{
     position: fixed;
     top:auto;
     left: 0;
-    border: 0.4vh solid black;
+    border: 0.4vw solid black;
+}
+
+@media(max-width:650px){
+    .bio_container{
+        min-height: 28vw;
+        min-width: 20vw;
+        background-color: aliceblue;
+        text-align: left;
+    }
+    
+    .bio_img{
+        max-width: 20%;
+        display: inline-block;
+        margin-top: 6vw;
+        margin-left: 3vw;
+    }
+    
+    .bio_txt{
+        font-size: 2vw;
+        margin-left: 4vw;
+    }
+    .home_btn{
+        position: fixed;
+        top:auto;
+        left: 0;
+        border: 0.4vw solid black;
+    }
 }

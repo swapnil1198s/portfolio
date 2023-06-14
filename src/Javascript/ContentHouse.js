@@ -9,7 +9,7 @@ function ContentHouse(){
         <div >
             <div className="big-daddy">
                 <div className="my-line"></div>
-                <p className="work-text">
+                <p className="content_heading">
                     Check Out Some Of My Work
                 </p>
                 <div className="my-line"></div>
@@ -27,13 +27,14 @@ function ContentHouse(){
                 expandedContent={
                     <div className="publications">
                         <div className="publication_cont">
-                            <div className="publication_item">
-                                <a href="https://ceur-ws.org/Vol-3359/paper29.pdf">
-                                    <img src={paper_1_img} alt="Designing a Recommender System to Recruit Older Adults for Research Studies"/>
-                                </a>
-                            </div>
+                            
                             <div className="publication_item">
                                 <h2>Designing a Recommender System to Recruit Older Adults for Research Studies</h2>
+                                <div className="publication_item">
+                                    <a href="https://ceur-ws.org/Vol-3359/paper29.pdf">
+                                        <img src={paper_1_img} alt="Designing a Recommender System to Recruit Older Adults for Research Studies"/>
+                                    </a>
+                                </div>
                                 <p>
                                     Recruiting older adults for research studies is a challenging endeavor. We conducted an interview to understand older adults’
                                     preferences and expectations, with the goal of building a recommender system to support the selection of suitable research
