@@ -9,11 +9,11 @@
   cursor: pointer;
 }
 .content_box.expanded {
-  height: 50vw;
+  height: 70vh;
   width: 70%;
+  overflow-y: auto;
 }
 .content_box.collapsed {
-  height: 20vw;
   width: 25%;
 }
 .content_box .my_line {
@@ -27,11 +27,8 @@
     margin:2vw;
     text-align: center;
 }
-
-.content_box h2 {
-    font-size: 3vw;
-    font-weight: 500;
-    margin-bottom: 1vw;
+.panel_heading{
+  margin: 1vw;
 }
 /*Smartphone styles*/
 @media(max-width:650px){
@@ -46,11 +43,11 @@
     cursor: pointer;
   }
   .content_box.expanded {
-    height: 50vw;
+    height: 70vw;
     width: 70%;
+    overflow-y: auto;
   }
   .content_box.collapsed {
-    height: 20vw;
     width: 70%;
   }
   .content_box .my_line {

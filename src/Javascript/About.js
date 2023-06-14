@@ -56,12 +56,12 @@ function About({setState}){
                         <div className="name">
                             <p>Swapnil <br/> Srivastava</p>
                         </div>
-                        <div className="resume">
-                            <a href={resume}>
-                                <img src={resume_pic}/>
-                            </a>
-                            <p>Resume</p>
-                        </div>
+                        <a href={resume}>
+                            <div className="resume">
+                                    <img src={resume_pic}/>
+                                <p>Resume</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

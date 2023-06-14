@@ -14,7 +14,7 @@ const ContentBox = ({heading, expandedContent, collapsedContent, backgroundColor
             setIsExpanded(true);
             setTimeout(()=>{
                 setIsContentVisible(true);
-            }, 300);
+            }, 200);
         }
     };
 
@@ -29,7 +29,7 @@ const ContentBox = ({heading, expandedContent, collapsedContent, backgroundColor
         className= {`${styles.content_box} ${isExpanded ? styles.expanded: styles.collapsed}`} id="c2">
             <h2 className="panel_heading">{heading}</h2>
             <div className= {`${styles.my_line}`}></div>
-            {isContentVisible? <h1>{expandedContent}</h1>: collapsedContent}
+            {isContentVisible? expandedContent: collapsedContent}
         </div>
     );
 };
