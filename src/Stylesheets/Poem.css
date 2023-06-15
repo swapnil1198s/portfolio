@@ -1,0 +1,28 @@
+.poem{
+    cursor: pointer;
+    margin-right: 10px;
+    width: 30vw;
+    max-height: 100%;
+    color: white;
+}
+.poem img{
+    max-height: 70%;
+}
+.poem h2{
+    font-size: 15px;
+}
+@media (max-width: 650px){
+    .poem{
+        cursor: pointer;
+        margin-right: 10px;
+        width: 30vw;
+        max-height: 100%;
+        color: white;
+    }
+    .poem img{
+        max-height: 70%;
+    }
+    .poem h2{
+        font-size: 15px;
+    }
+}

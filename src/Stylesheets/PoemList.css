@@ -1,0 +1,36 @@
+.poem-list {
+    display: flex;
+    overflow-x: scroll;
+    padding: 2vw;
+    height: 40vh;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+@media(max-width:650px){
+  .poem-list {
+    display: flex;
+    overflow-x: scroll;
+    padding: 2vw;
+    height: 25vh;
+  }
+}
+  

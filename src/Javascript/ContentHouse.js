@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Stylesheets/ContentHouse.css'
 import ContentBox from "./ContentBox";
 import paper_1_img from "../images/paper_1_img.png";
-import paper_1 from "../documents/paper_1.pdf";
+import PoemList from "./PoemList";
 
 function ContentHouse(){
     const [hover, setHover] = useState(false);
@@ -11,14 +11,42 @@ function ContentHouse(){
         <div >
             <div className="big-daddy">
                 <div className="my-line"></div>
-                <p className="content_heading">
+                <p className="main_content_heading">
                     Check Out Some Of My Work
                 </p>
                 <div className="my-line"></div>
             </div>
             <div className="content-house">
                 <ContentBox heading="Creative Work" 
-                expandedContent={<div className="expanded"></div>} 
+                expandedContent={<div className="expanded">
+                    <h2 className="content_heading">
+                            Poems
+                    </h2>
+                    <PoemList/>
+                    <h2 className="content_heading">
+                            Illustrations
+                    </h2>
+                    <div className="content_container">
+                    </div>
+                    <h2 className="content_heading">
+                            Short Stories
+                    </h2>
+                    <div className="content_container">
+                        
+                    </div>
+                    <h2 className="content_heading">
+                            Comics
+                    </h2>
+                    <div className="content_container">
+                        
+                    </div>
+                    <h2 className="content_heading">
+                            Videos
+                    </h2>
+                    <div className="content_container">
+                        
+                    </div>
+                </div>} 
                 collapsedContent = {
                     <div className="collapsed">
                         <p>This card contains a collection of my creative work.</p>
