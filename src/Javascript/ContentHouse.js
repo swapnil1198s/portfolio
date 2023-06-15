@@ -3,10 +3,32 @@ import '../Stylesheets/ContentHouse.css'
 import ContentBox from "./ContentBox";
 import paper_1_img from "../images/paper_1_img.png";
 import PoemList from "./PoemList";
+import Software from "./SoftwareList";
+import game1_img from "../images/game1.png";
+import game2_img from "../images/game2.png";
+import web1 from "../images/web1.png";
 
 function ContentHouse(){
     const [hover, setHover] = useState(false);
-    
+    const games = [
+        {
+            title: 'Uncle Stormtrooper',
+            preview: game1_img,
+            source: 'https://github.com/swapnil1198s/Uncle-Stormtrooper'
+        },
+        {
+            title: 'Monster Shot',
+            preview: game2_img,
+            source: 'https://github.com/swapnil1198s/Monster-Shot'
+        },
+    ]
+    const websites = [
+        {
+            title: 'Portfolio Website',
+            preview: web1,
+            source: 'https://github.com/swapnil1198s/portfolio'
+        },
+    ]
     return(
         <div >
             <div className="big-daddy">
@@ -58,9 +80,26 @@ function ContentHouse(){
                         </ul>
                     </div>
                 } 
-                backgroundColor="rgb(201, 251, 206)"/>
-                <ContentBox heading="Software"
-                 expandedContent={<div className="expanded"></div>
+                backgroundColor="rgb(201, 251, 206)"
+                expanded={false}/>
+                <ContentBox expanded={true} heading="Software"
+                 expandedContent={
+                    <div className="expanded">
+                        <h2 className="content_heading">Live Applications</h2>
+                        <Software programs={websites}/>
+                        <h2 className="content_heading">Games</h2>
+                        <Software programs={games}/>
+                        <h2 className="content_heading">Python Programs</h2>
+                        <Software programs={games}/>
+                        <h2 className="content_heading">Java Programs</h2>
+                        <Software programs={games}/>
+                        <h2 className="content_heading">Data Management</h2>
+                        <Software programs={games}/>
+                        <h2 className="content_heading">Websites</h2>
+                        <Software programs={websites}/>
+                        <h2 className="content_heading">Machine Learning</h2>
+                        <Software programs={games}/>
+                    </div>
                     } 
                  collapsedContent = {
                     <div className="collapsed">
@@ -74,7 +113,7 @@ function ContentHouse(){
                     </div>
                 }  
                  backgroundColor="rgb(238, 201, 251)"/>
-                <ContentBox heading="Publications" 
+                <ContentBox expanded={false} heading="Publications" 
                 expandedContent={
                     <div className="expanded publications">
                         <div className="publication_cont">

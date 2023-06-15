@@ -1,8 +1,9 @@
-.poem-list {
+.software-list {
     display: flex;
     overflow-x: scroll;
     padding: 1vh 2vw 1vh 2vw;
     height: 40vh;
+    color: white;
   }
   
   .overlay {
@@ -26,10 +27,10 @@
   }
 
 @media(max-width:650px){
-  .poem-list {
+  .software-list {
     display: flex;
     overflow-x: scroll;
-    padding: 2vw;
+    padding: 1vh 2vw 1vh 2vw;
     height: 25vh;
   }
 }

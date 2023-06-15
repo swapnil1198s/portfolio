@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styles from '../Stylesheets/ContentBox.module.css'
 
-const ContentBox = ({heading, expandedContent, collapsedContent, backgroundColor}) => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [isContentVisible, setIsContentVisible] = useState(false);
+const ContentBox = ({heading, expandedContent, collapsedContent, backgroundColor, expanded}) => {
+    const [isExpanded, setIsExpanded] = useState(expanded);
+    const [isContentVisible, setIsContentVisible] = useState(expanded);
 
     const handleClick = () => {
         if(isExpanded){
