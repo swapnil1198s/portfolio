@@ -10,6 +10,7 @@ const SoftwareList = ({programs}) =>{
                     title={program.title}
                     preview = {program.preview}
                     source = {program.source}
+                    description={program.description}
                 />
             ))}
         </div>
