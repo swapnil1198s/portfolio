@@ -113,24 +113,25 @@ function ContentHouse(){
                             Illustrations
                     </h2>
                     <div className="content_container">
+                        Coming soon
                     </div>
                     <h2 className="content_heading">
                             Short Stories
                     </h2>
                     <div className="content_container">
-                        
+                        Coming soon
                     </div>
                     <h2 className="content_heading">
                             Comics
                     </h2>
                     <div className="content_container">
-                        
+                        Coming soon
                     </div>
                     <h2 className="content_heading">
                             Videos
                     </h2>
                     <div className="content_container">
-                        
+                        Coming soon
                     </div>
                 </div>} 
                 collapsedContent = {
