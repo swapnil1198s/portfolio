@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Poem from "./Poem";
 import "../Stylesheets/PoemList.css";
 import poem1 from "../documents/poems/poem1.pdf"
@@ -14,7 +14,6 @@ import prev4 from "../documents/poems/prev4.jpg"
 import prev5 from "../documents/poems/prev5.jpg"
 
 const PoemList = () => {
-    const [selectedPoem, setSelectedPoem] = useState(null);
     const poems = [
         {
             title: 'I stumble and fall',
@@ -54,13 +53,6 @@ const PoemList = () => {
                     />
                 ))}
             </div>
-            {selectedPoem && (
-                <div className="overlay">
-                    <div className="modal">
-                        <embed src={selectedPoem.pdf} type="application/pdf" width="100%" height="100%"/>
-                    </div>
-                </div>
-            )}
         </div>
     )
 }

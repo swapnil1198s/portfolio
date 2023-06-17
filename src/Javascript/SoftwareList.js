@@ -7,6 +7,7 @@ const SoftwareList = ({programs}) =>{
         <div className="software-list">
             {programs.map((program)=>(
                 <Software
+                    key={program.title}
                     title={program.title}
                     preview = {program.preview}
                     source = {program.source}

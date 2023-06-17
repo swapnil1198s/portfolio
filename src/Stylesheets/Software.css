@@ -19,14 +19,14 @@
     color: white;
 }
 
-  .software_img .img_overlay {
+.software_img .img_overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5); /* Adjust as needed */
-    color: white; /* Adjust as needed */
+    background: rgba(0,0,0,0.5); 
+    color: white; 
     display: flex;
     justify-content: center;
     align-items: center;

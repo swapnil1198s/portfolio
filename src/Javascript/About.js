@@ -1,22 +1,58 @@
-import React from "react";
+import React, {useState} from "react";
+import { FaCaretDown, FaCaretRight } from "react-icons/fa";
 import '../Stylesheets/About.css'
 import {FaArrowLeft} from 'react-icons/fa'
 import profile_pic from '../images/ss_smiling.jpg'
 import resume from '../documents/Resume.pdf'
 import resume_pic from '../images/resume_pic.png'
+import styled from "styled-components"
 
+const CategoryContainer= styled.div`
+margin: 0 0 1em 0;
+border-top: 1px solid white;`;
+const CategoryHeader= styled.div`
+    display: flex;
+    align-items:center;
+    padding: 0.5em;
+    cursor: pointer;`;
+const SkillList = styled.ul`
+    margin: 0;
+    padding: 0 1em;
+    list-style-type: none;
+    max-height: ${props => props.isOpen ? '50vh' : '0'};
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;`;
 
 function About({setState}){
+    const [selectedCategory, setSelectedCategory] = useState(null);
+
+    const categories = {
+        'Front-End Development':['React', 'Angular', 'HTML', 'CSS', 'JavaScript', 'TypeScript'],
+        'Back-End Development': ['Node.js', 'Python', 'Java', 'Express.js'],
+        'Game Development': ['Pygame', 'Python'],
+        'Database Management': ['MySQL', 'NoSQL', 'MongoDB'],
+        'Machine Learning': ['Python', 'scikit-learn'],
+        'DevOps/Cloud': ['Docker', 'Kubernetes','AWS', 'CI/CD principles'],
+        'Web Services/API development':['REST'],
+        'Programming Languages': ['Python', 'Java', 'JavaScript', 'TypeScript', 'C', 'C++', 'C#', ],
+        'Security': ['SQL injections'],
+        'Version Control':['Git', 'GitHub'],
+        'UI/UX': ['Adobe XD', 'Sketch','Figma', 'Invision'],
+        'Testing and Quality Assurance':['JUnit', 'Unit Testing', 'Integration Testing', 'System Testing'],
+        'Robotics': ['Java', 'C', 'Python']
+    };
+
+    const toggleCategory = (category) =>{
+        if(selectedCategory === category){
+            setSelectedCategory(null);
+        }
+        else{
+            setSelectedCategory(category);
+        }
+    };
+
     return(
         <div className="about_container">
-            {/* <div className="about_heading">
-                <div className="my-line"></div>
-                <p className="work-text">
-                    A Few Words About Me
-                </p>
-                <div ></div>
-                <div className="my-line"></div>
-            </div> */}
             <div className="home_btn" onClick={()=>setState('home')}>
                     <FaArrowLeft/>
                 </div>
@@ -46,19 +82,41 @@ function About({setState}){
                         <div className="se_cont">
                             <div className="se_skills">
                                 <h1 className="bg_headings">Software Engineering Skills</h1>
+                                <div className="skills_cont_wrapper">
+                                    <div className="skills_cont">
+                                        {Object.keys(categories).map((category)=>(
+                                            <CategoryContainer key={category}>
+                                                <CategoryHeader onClick={()=>toggleCategory(category)}>
+                                                    {selectedCategory===category? <FaCaretDown/> : <FaCaretRight/>}
+                                                    {category}
+                                                </CategoryHeader>
+                                                <SkillList isOpen={selectedCategory === category}>
+                                                    {categories[category].map((skill)=>(
+                                                        <li className="skill_item" key={skill}>{skill}</li>
+                                                    ))}
+                                                </SkillList>
+                                            </CategoryContainer>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
                     
                     <div className="pic_cont">
-                        <img className="bg_pic" src={profile_pic}/>
+                        <img className="bg_pic" src={profile_pic} alt="Swapnil Smiling"/>
                         <div className="name">
                             <p>Swapnil <br/> Srivastava</p>
                         </div>
                         <a href={resume}>
                             <div className="resume">
-                                    <img src={resume_pic}/>
+                                <div className="resume_img">
+                                    <img src={resume_pic} alt="Resume preview"/>
+                                    <div className="img_overlay">
+                                        <p>View Resume</p>
+                                    </div>
+                                </div>
                                 <p>Resume</p>
                             </div>
                         </a>
