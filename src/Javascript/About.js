@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { FaCaretDown, FaCaretRight } from "react-icons/fa";
 import '../Stylesheets/About.css'
 import {FaArrowLeft} from 'react-icons/fa'
@@ -24,6 +24,9 @@ const SkillList = styled.ul`
     transition: max-height 0.3s ease-in-out;`;
 
 function About({setState}){
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    }, []);
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     const categories = {

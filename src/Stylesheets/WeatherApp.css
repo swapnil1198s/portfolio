@@ -2,7 +2,7 @@
     position: relative;
     padding-top: 2vh;
     width : 100%;
-    height: 100vh;
+    min-height: 70vh;
     background-image: url(../images/weather_bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,12 +14,21 @@
     background-color: rgba(255, 255, 255, 0.5);
     margin: 2vw;
     width: 90%;
-    overflow-x: scroll;
+    border-radius: 10px;
 }
-  
+
+.weather_view h2{
+    margin: 0;
+    border-top: 1px dashed purple;
+    border-bottom: 1px dashed purple;
+    background-color: white;
+    color: #ffc400;
+    padding: 1vh;
+}
 .hourly_forecast {
     display: flex;
     overflow-x: auto; /* allows horizontal scrolling if there are too many items */
+    overflow-y: auto;
     margin: 0;
     padding-left: 10px; /* Add left padding equal to the item margin */
 }
@@ -28,7 +37,11 @@
     flex-shrink: 0; /* prevents items from shrinking if there are too many items */
     width: 7vw; /* fixed width for each item */
     text-align: center;
-    margin: 10px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.hourly_item p{
+    font-size: small;
 }
 
 
@@ -39,8 +52,8 @@
 
 .home_btn{
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 1vw;
+    top: 2vh;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -72,10 +85,33 @@
 }
 @media (max-width: 650px){
     .weather_app{
-        width : 100%;
-        height: 100vh;
-        background-image: url(../images/weather_bg.jpeg);
         background-size: contain;
-        background-repeat: no-repeat;
+        padding-top: 5vh; /* Increased padding for better visibility */
+        background-repeat: repeat;
+        height: 80vh;
+    }
+
+    .weather_view{
+        width: 95%; /* Increased width for better utilization of space */
+    }
+
+    .hourly_item{
+        width: 20vw; /* Adjusted width for better visibility */
+        margin: 5px; /* Adjusted margin */
+    }
+
+    .home_btn{
+        left: 2vw; /* Adjusted button position */
+        top: 2vh;
+        width: 8vw; /* Adjusted width */
+    }
+
+    .home_btn p{
+        font-size: 3vw; /* Adjusted font size */
+    }
+
+    #input_box{
+        width: 80vw; /* Adjusted width */
+        height: 40px; /* Adjusted height */
     }
 }

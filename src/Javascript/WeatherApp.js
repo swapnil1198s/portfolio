@@ -83,23 +83,23 @@ const WeatherApp = ({setState}) => {
             {weatherData && (
                 <div className="weather_view">
                     <h1>{kelvinToFahrenheit(weatherData.current.temp)}<sup>&deg;</sup>F</h1>
+                    <h2>Hourly Forecast</h2>
                     <div className="hourly_forecast">
-                            
-                    {weatherData.hourly.map((hour, index) => {
-                        const date = new Date((hour.dt) * 1000);
-                        const hours = date.toLocaleString();
-                        const minutes = "0" + date.getMinutes();
-                        const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });;
+                        {weatherData.hourly.map((hour, index) => {
+                            const date = new Date((hour.dt) * 1000);
+                            const hours = date.toLocaleString();
+                            const minutes = "0" + date.getMinutes();
+                            const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });;
 
-                        return (
-                            <div key={index} className="hourly_item">
-                            <h4>Time: {formattedTime} EST</h4>
-                            <p>Temp: {kelvinToFahrenheit(hour.temp)}&deg;F</p>
-                            <p>Chance of rain: {(hour.pop * 100).toFixed(2)}%</p>
-                            <p>Weather: {hour.weather[0].main}</p>
-                            </div>
-                        );
-                    })}
+                            return (
+                                <div key={index} className="hourly_item">
+                                    <h4>Time: {formattedTime}</h4>
+                                    <p>{kelvinToFahrenheit(hour.temp)}&deg;F</p>
+                                    <p>Chance of rain:<br/> {(hour.pop * 100).toFixed(2)}%</p>
+                                    <p>Weather: {hour.weather[0].main}</p>
+                                </div>
+                            );
+                        })}
 
                     </div>
                 </div>)}

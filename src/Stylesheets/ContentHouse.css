@@ -23,7 +23,7 @@
 .main_content_heading{
     font-size: 4vh;
     font-weight: 550;
-    margin: 3vh 5vh;
+    margin: 2vh 5vh 2vh 5vh;
 }
 
 .my-line{
@@ -120,6 +120,11 @@
     font-weight: bolder;
     font-size: 2vw;
     color: white;
+    transition: transform 0.5s ease;
+}
+
+.weather_widget:hover{
+    transform: scale(1.05);
 }
 
 /*Smartphone styling*/
