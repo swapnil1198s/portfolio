@@ -19,18 +19,23 @@
   
 .hourly_forecast {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
     overflow-x: auto; /* allows horizontal scrolling if there are too many items */
     margin: 0;
+    padding-left: 10px; /* Add left padding equal to the item margin */
 }
   
 .hourly_item{
     flex-shrink: 0; /* prevents items from shrinking if there are too many items */
-    width: 5vw; /* fixed width for each item */
+    width: 7vw; /* fixed width for each item */
     text-align: center;
     margin: 10px;
 }
+
+
+.hourly_item:first-child {
+    margin-left: 0;
+}
+
 
 .home_btn{
     position: absolute;
@@ -51,6 +56,19 @@
 
 .home_btn p{
     font-size: 2vw;
+}
+#input_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#input_box{
+    margin: 1vh;
+    width: 40vw;
+    height: 30px;
+}
+.suggestions:hover{
+    cursor: pointer;
 }
 @media (max-width: 650px){
     .weather_app{

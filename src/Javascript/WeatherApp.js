@@ -3,6 +3,7 @@ import axios from "axios";
 import PlacesAutocomplete , { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import "../Stylesheets/WeatherApp.css"
 import { FaArrowLeft } from "react-icons/fa";
+import moment from 'moment-timezone';
 
 const WeatherApp = ({setState}) => {
     const [adress, setAdress] = useState("");
@@ -12,6 +13,7 @@ const WeatherApp = ({setState}) => {
     const fetchWeather = async (lat, lon) =>{
         try{
             const {data} = await axios.get(`http://localhost:8000/weather?lat=${lat}&lon=${lon}`);
+            console.log(data)
             setWeatherData(data)
         }
         catch(error){
@@ -56,12 +58,16 @@ const WeatherApp = ({setState}) => {
             >
                 {({getInputProps, suggestions, getSuggestionItemProps, loading})=>(
                     <div className="adress_input">
-                        <input {...getInputProps({ placeholder: 'Enter Location' })}/>
+                        <div id="input_div">
+                            <input id="input_box" {...getInputProps({ placeholder: 'Enter Location' })}/>
+                        </div>
                         <div className="suggestions">
                             {loading?<div className="loading">...Loading</div>: null}
                             {suggestions.map((suggestion, index) => {
                                 const style = {
                                     backgroundColor: suggestion.active? '#e3df8f' : '#fff',
+                                    textAlign: 'left',
+                                    padding: '10px',
                                 };
                                 return(
                                     <div {...getSuggestionItemProps(suggestion, {style})} key={index}>
@@ -78,21 +84,23 @@ const WeatherApp = ({setState}) => {
                 <div className="weather_view">
                     <h1>{kelvinToFahrenheit(weatherData.current.temp)}<sup>&deg;</sup>F</h1>
                     <div className="hourly_forecast">
-                        {weatherData.hourly.map((hour, index) => {
-                            const date = new Date(hour.dt * 1000);
-                            const hours = date.getHours();
-                            const minutes = "0" + date.getMinutes();
-                            const formattedTime = hours + ":" + minutes.substr(-2);
+                            
+                    {weatherData.hourly.map((hour, index) => {
+                        const date = new Date((hour.dt) * 1000);
+                        const hours = date.toLocaleString();
+                        const minutes = "0" + date.getMinutes();
+                        const formattedTime = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });;
 
-                            return (
-                                <div key={index} className="hourly_item">
-                                <h4>Time: {formattedTime}</h4>
-                                <p>Temp: {kelvinToFahrenheit(hour.temp)}&deg;F</p>
-                                <p>Chance of rain: {(hour.pop * 100).toFixed(2)}%</p>
-                                <p>Weather: {hour.weather[0].main}</p>
-                                </div>
-                            );
-                        })}
+                        return (
+                            <div key={index} className="hourly_item">
+                            <h4>Time: {formattedTime} EST</h4>
+                            <p>Temp: {kelvinToFahrenheit(hour.temp)}&deg;F</p>
+                            <p>Chance of rain: {(hour.pop * 100).toFixed(2)}%</p>
+                            <p>Weather: {hour.weather[0].main}</p>
+                            </div>
+                        );
+                    })}
+
                     </div>
                 </div>)}
         </div>
