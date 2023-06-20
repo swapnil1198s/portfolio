@@ -13,7 +13,7 @@ import py3 from "../images/opteamal.png";
 import dtSt from "../images/dtSt.jpeg";
 import at from "../images/at.png"
 
-function ContentHouse(){
+function ContentHouse({setState}){
     const [hover, setHover] = useState(false);
     const live = [
         {
@@ -101,6 +101,9 @@ function ContentHouse(){
                     Check Out Some Of My Work
                 </p>
                 <div className="my-line"></div>
+            </div>
+            <div className="widget_container">
+                <div className="weather_widget" onClick={()=>setState('weather')}>WeatherApp</div>
             </div>
             <div className="content-house">
                 <ContentBox heading="Creative Work" 

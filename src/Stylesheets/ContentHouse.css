@@ -105,6 +105,17 @@
     overflow-x: auto;
     padding: 1px;
 }
+.weather_widget{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+    background-color: skyblue;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 /*Smartphone styling*/
 @media (max-width:650px){

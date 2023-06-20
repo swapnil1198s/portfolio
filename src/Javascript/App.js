@@ -4,6 +4,7 @@ import Home from './Home';
 import About from './About'
 import Foot from './Foot';
 import { useState } from 'react';
+import WeatherApp from "./WeatherApp"
 
 function App() {
   const [state, setState] = useState('home');
@@ -13,7 +14,7 @@ function App() {
       <Banner />
       {state === 'home' && (<Home setState={setState}/>)} 
       {(state === 'bio') && (<About setState={setState}/>)}
-
+      {(state === 'weather') && (<WeatherApp setState = {setState}/>)}
       <Foot/>
     </div>
   );

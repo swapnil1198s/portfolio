@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const axios = require('axios');
+require('dotenv').config();
 
 app.use(cors());
 
@@ -11,7 +12,9 @@ app.listen(8000, () => {
 
 app.get('/weather', async (req, res) => {
   try {
-    const { data } = await axios.get('https://api.openweathermap.org/data/3.0/onecall?lat=34.6834&lon=-82.8374&appid=074990688e9ad4b322131d4cbccce9a9');
+    console.log('Fetching weather data');
+    const { lat, lon } = req.query;
+    const { data } = await axios.get(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_API_KEY}`);
     res.json(data);
   } catch (error) {
     console.error(error); // Log the error for debugging
