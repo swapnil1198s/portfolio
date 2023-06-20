@@ -2,8 +2,9 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import PlacesAutocomplete , { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import "../Stylesheets/WeatherApp.css"
+import { FaArrowLeft } from "react-icons/fa";
 
-const WeatherApp = () => {
+const WeatherApp = ({setState}) => {
     const [adress, setAdress] = useState("");
     const [weatherData, setWeatherData] = useState(null);
 
@@ -39,8 +40,15 @@ const WeatherApp = () => {
         return (kelvin - 273.15).toFixed(2);
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return(
         <div className="weather_app">
+            <div className="home_btn" onClick={()=>setState('home')}>
+                    <FaArrowLeft/>
+            </div>
             <PlacesAutocomplete
                 value={adress}
                 onChange={setAdress}
@@ -70,21 +78,21 @@ const WeatherApp = () => {
                 <div className="weather_view">
                     <h1>{kelvinToFahrenheit(weatherData.current.temp)}<sup>&deg;</sup>F</h1>
                     <div className="hourly_forecast">
-                    {weatherData.hourly.map((hour, index) => {
-                        const date = new Date(hour.dt * 1000);
-                        const hours = date.getHours();
-                        const minutes = "0" + date.getMinutes();
-                        const formattedTime = hours + ":" + minutes.substr(-2);
+                        {weatherData.hourly.map((hour, index) => {
+                            const date = new Date(hour.dt * 1000);
+                            const hours = date.getHours();
+                            const minutes = "0" + date.getMinutes();
+                            const formattedTime = hours + ":" + minutes.substr(-2);
 
-                        return (
-                            <div key={index} className="hourly-forecast__item">
-                            <h4>Time: {formattedTime}</h4>
-                            <p>Temp: {kelvinToFahrenheit(hour.temp)}&deg;F</p>
-                            <p>Chance of rain: {hour.pop * 100}%</p>
-                            <p>Weather: {hour.weather[0].main}</p>
-                            </div>
-                        );
-                    })}
+                            return (
+                                <div key={index} className="hourly_item">
+                                <h4>Time: {formattedTime}</h4>
+                                <p>Temp: {kelvinToFahrenheit(hour.temp)}&deg;F</p>
+                                <p>Chance of rain: {(hour.pop * 100).toFixed(2)}%</p>
+                                <p>Weather: {hour.weather[0].main}</p>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>)}
         </div>

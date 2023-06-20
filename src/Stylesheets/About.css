@@ -23,6 +23,8 @@
     background-repeat: none;
     background-size: cover;
     background-position: center;
+    position: relative;
+    padding-top: 3vw;
 }
 .about_body{
     width: auto;
@@ -36,7 +38,9 @@
     align-items: center;
     cursor: pointer;
     padding: 1vw 1vw;
-    position: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 4vw;
 }
 
