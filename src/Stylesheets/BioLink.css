@@ -2,23 +2,29 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3vw;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
 }
 
 .link {
     background-color: rgb(0, 66, 128);
     margin-left: 3%;
-    padding: 1vw;
-    border-radius: 2vw;
+    padding: 1vh;
+    border-radius: 20px;
     cursor: pointer;
+    transition: transform 0.5s ease;
 }
 
 .link:hover{
     background-color:skyblue;
+    transform: scale(1.1);
 }
 
-
+.text{
+    font-size: 1.5vw;
+}
 .link h3 {
+    font-size: 1.5vw;
     margin: 1vw;
     color: white;
 }
@@ -29,7 +35,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 3vw;
+        margin: 3vw;
     }
     
     .link {

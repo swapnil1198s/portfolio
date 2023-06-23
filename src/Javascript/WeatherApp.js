@@ -12,7 +12,7 @@ const WeatherApp = ({setState}) => {
     //Function that gets weather data from the server.js file
     const fetchWeather = async (lat, lon) =>{
         try{
-            const {data} = await axios.get(`http://localhost:8000/weather?lat=${lat}&lon=${lon}`);
+            const {data} = await axios.get(`https://40kscn18l6.execute-api.us-east-2.amazonaws.com/deployWeatherAPI/lambda-weather-api-call?lat=${lat}&lon=${lon}`);
             console.log(data)
             setWeatherData(data)
         }

@@ -103,7 +103,10 @@ function ContentHouse({setState}){
                 <div className="my-line"></div>
             </div>
             <div className="widget_container">
-                    <div className="weather_widget" onClick={()=>setState('weather')}>Weather App</div>
+                    <div className="weather_widget widget" onClick={()=>setState('weather')}><p>Weather App</p></div>
+                    <div className="productivity_widget widget" ><p>Productivity Manager</p></div>
+                    <div className="space_simulator_widget widget"><p>Space Exploration Simulator</p></div>
+                    <div className="path_finder_widget widget" ><p>Path Finder</p></div>
             </div>
             <div className="content-house">
                 <ContentBox heading="Creative Work" 

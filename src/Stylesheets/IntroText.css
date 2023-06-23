@@ -7,15 +7,17 @@
     border-radius: 2vw;
     color: white;
     font-weight: 550;
+    transition: transform 0.5s ease;
 }
 
 .intro_text:hover{
     background-color:skyblue;
     color: black;
+    transform: scale(1.03);
 }
 
 .intro_text p{
-    font-size: small;
+    font-size: medium;
 }
 .intro_text_uni {
     width: auto;

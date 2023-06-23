@@ -13,12 +13,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2vh;
 }
 .content_heading{
     font-size: 25px;
     margin-top: 0px;
     padding-top: 2vh;
-    margin-bottom: 1vh;
+    margin-bottom: 2vh;
 }
 .main_content_heading{
     font-size: 4vh;
@@ -28,7 +29,7 @@
 
 .my-line{
     width: 30vh;
-    height: 1px;
+    min-height: 0.5vh;
     background-color: rgb(18, 18, 18);
 }
 
@@ -105,26 +106,82 @@
     overflow-x: auto;
     padding: 1px;
 }
-.weather_widget{
+.widget_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.widget{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vw;
     width: 20vw;
-    background-image: url(../images/weather_bg.jpeg);
     cursor: pointer;
-    font-size: 20px;
-    font-weight: bold;
     margin: 0 2vw 2vw 2vw;
     border-radius: 10px;
-    font-weight: bolder;
-    font-size: 2vw;
-    color: white;
+    background-color: peru;
     transition: transform 0.5s ease;
 }
-
-.weather_widget:hover{
+.weather_widget{
+    background-image: url(../images/weather_bg.jpeg);
+    background-size: cover;
+}
+.weather_widget p{
+    font-weight: bolder;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.651);
+    border-radius: 10px;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+}
+.widget:hover{
     transform: scale(1.05);
+}
+.space_simulator_widget{
+    background-image: url(../images/hug_mooon.jpeg);
+    background-size: cover;
+}
+.space_simulator_widget p{
+    font-weight: bolder;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin: 10%;
+}
+
+.productivity_widget{
+    background-image: url(../images/office_anime.jpeg);
+    background-size:100%;
+}
+.productivity_widget p{
+    font-weight: bolder;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin: 10%;
+}
+
+.path_finder_widget{
+    background-image: url(../images/anime_city.webp);
+    background-size:cover;
+}
+.path_finder_widget p{
+    font-weight: bolder;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    margin: 10%;
 }
 
 /*Smartphone styling*/
@@ -149,7 +206,7 @@
     .main_content_heading{
         font-size: 20px;
         font-weight: 550;
-        margin: 3vw 5vw;
+        margin: 5vw 5vw;
     }
     
     .my-line{
@@ -194,5 +251,18 @@
         font-size: 12px;
         list-style-position: inside;
         text-align: left;
+    }
+
+    .widget_container{
+        flex-direction: column;
+    }
+
+    .widget{
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .weather_widget p, .productivity_widget p,.space_simulator_widget p,.path_finder_widget p{
+        font-size: 20px;
     }
 }
