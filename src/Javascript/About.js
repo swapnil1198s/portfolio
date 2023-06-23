@@ -62,7 +62,24 @@ function About({setState}){
             <div className="about_body" >
                 
                 <div className="background">
-                    <div className="words">
+                    <div className="pic_cont">
+                            <img className="bg_pic" src={profile_pic} alt="Swapnil Smiling"/>
+                            <div className="name">
+                                <p>Swapnil <br/> Srivastava</p>
+                            </div>
+                            <a href={resume}>
+                                <div className="resume">
+                                    <div className="resume_img">
+                                        <img src={resume_pic} alt="Resume preview"/>
+                                        <div className="img_overlay">
+                                            <p>View Resume</p>
+                                        </div>
+                                    </div>
+                                    <p>Resume</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div className="words">
                         <div className="bg_text_cont">
                             <div className="bg_text">
                                 <h1 className="bg_headings">My Purpose</h1>
@@ -107,23 +124,7 @@ function About({setState}){
                     </div>
                     
                     
-                    <div className="pic_cont">
-                        <img className="bg_pic" src={profile_pic} alt="Swapnil Smiling"/>
-                        <div className="name">
-                            <p>Swapnil <br/> Srivastava</p>
-                        </div>
-                        <a href={resume}>
-                            <div className="resume">
-                                <div className="resume_img">
-                                    <img src={resume_pic} alt="Resume preview"/>
-                                    <div className="img_overlay">
-                                        <p>View Resume</p>
-                                    </div>
-                                </div>
-                                <p>Resume</p>
-                            </div>
-                        </a>
-                    </div>
+                    
                 </div>
             </div>
         </div>

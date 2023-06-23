@@ -8,7 +8,7 @@ function BioLink({setState}){
                 Who is this monkey?
             </h3>
             <div className="link" onClick={()=>setState('bio')}>
-                <h3>Click here to learn about me and my background</h3>
+                <h3>Click here to learn about me</h3>
             </div>
         </div>
     )

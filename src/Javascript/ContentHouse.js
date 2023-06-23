@@ -183,7 +183,7 @@ function ContentHouse({setState}){
                         </ul>
                     </div>
                 }  
-                 backgroundColor="rgb(238, 201, 251)"/>
+                 backgroundColor="rgb(232, 235, 52)"/>
                 <ContentBox expanded={false} heading="Publications" 
                 expandedContent={
                     <div className="expanded publications">

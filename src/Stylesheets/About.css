@@ -42,10 +42,12 @@
     top: 0;
     left: 0;
     width: 4vw;
+    transition: transform 0.3s ease;
 }
 
 .home_btn:hover{
     background-color: skyblue;
+    transform: scale(1.1);
 }
 
 .home_btn p{
@@ -230,4 +232,64 @@
     text-align: center;
     padding: 1vh;
     border-bottom: 1px solid black;
+}
+
+@media(max-width: 650px){
+    .background{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+    .about_body{
+        justify-content: center;
+    }
+    .words{
+        width: 100%;
+    }
+    .bg_text_cont{
+        font-size: calc(8px + 0.8vw);
+        font-weight:550;
+        border: 1vw solid rgba(0, 0, 0, 0.7);
+        border-radius: 3vh;
+        text-align: left;
+        height: 30%;
+    }
+    .se_cont{
+        border-radius: 3vh;
+    }
+    .pic_cont{
+        max-width: 100%;
+        margin: 2vw 2vw 0 2vw;
+    }
+    .resume{
+        cursor: pointer;
+        max-width: 50%;
+        color:white;
+        padding: 1vw;
+        font-weight: bold;
+    }
+    .resume p{
+        margin: 1vh;
+    }
+    .skills_cont_wrapper {
+        height: 30vh; 
+        margin-bottom: 1vh;
+    }
+    .skills_cont::-webkit-scrollbar {
+        width: 2vw;
+        background-color: transparent;
+    }
+    .bg_text::-webkit-scrollbar {
+        width: 2vw;
+        background-color: transparent;
+    }
+    .name p{
+        margin: 0;
+        font-size: calc(10px + 3vw);
+        font-weight: bold;
+        font-family:'Lucida Sans' ;
+        color: white;
+        padding: 0vw;
+    }
 }
