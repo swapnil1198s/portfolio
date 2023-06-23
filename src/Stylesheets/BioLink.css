@@ -33,6 +33,7 @@
 @media (max-width:650px){
     .BioLink{
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: 3vw;
@@ -40,9 +41,8 @@
     
     .link {
         background-color: rgb(0, 66, 128);
-        margin-left: 3vw;
         padding: 1vw;
-        border-radius: 2vw;
+        border-radius: 10px;
         cursor: pointer;
     }
     

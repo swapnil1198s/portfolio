@@ -1,5 +1,4 @@
 .weather_app{
-    position: relative;
     padding-top: 2vh;
     width : 100%;
     min-height: 70vh;
@@ -101,8 +100,8 @@
     }
 
     .home_btn{
-        left: 2vw; /* Adjusted button position */
-        top: 2vh;
+        left: 1vw; /* Adjusted button position */
+        top: 1vh;
         width: 8vw; /* Adjusted width */
     }
 

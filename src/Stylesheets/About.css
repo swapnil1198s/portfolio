@@ -23,7 +23,6 @@
     background-repeat: none;
     background-size: cover;
     background-position: center;
-    position: relative;
     padding-top: 3vw;
 }
 .about_body{
@@ -291,5 +290,10 @@
         font-family:'Lucida Sans' ;
         color: white;
         padding: 0vw;
+    }
+    .home_btn{
+        left: 1vw; /* Adjusted button position */
+        top: 1vh;
+        width: 8vw; /* Adjusted width */
     }
 }

@@ -1,0 +1,14 @@
+.underConstruction{
+    height: 80vh;
+    width: 100%;
+    background-image: url(../images/under_construction.png);
+    background-size: contain;
+}
+
+@media(max-width:650px){
+    .home_btn{
+        left: 1vw; /* Adjusted button position */
+        top: 1vh;
+        width: 8vw; /* Adjusted width */
+    }
+}
