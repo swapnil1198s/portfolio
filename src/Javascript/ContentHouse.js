@@ -1,8 +1,8 @@
 import React, { useState } from "react";
+import { FaCaretDown, FaCaretRight } from "react-icons/fa";
 import '../Stylesheets/ContentHouse.css'
 import ContentBox from "./ContentBox";
 import paper_1_img from "../images/paper_1_img.png";
-import PoemList from "./PoemList";
 import Software from "./SoftwareList";
 import game1_img from "../images/game1.png";
 import game2_img from "../images/game2.png";
@@ -12,9 +12,39 @@ import py2 from "../images/newplot.png";
 import py3 from "../images/opteamal.png";
 import dtSt from "../images/dtSt.jpeg";
 import at from "../images/at.png"
+import styled from "styled-components";
 
 function ContentHouse({setState}){
     const [hover, setHover] = useState(false);
+    const [selectedPoem, setSelectedPoem] = useState(null);
+    const togglePoem = (poem) =>{
+        if(selectedPoem===poem){
+            setSelectedPoem(null);
+        }
+        else{
+            setSelectedPoem(poem);
+        }
+    };
+    const poems = {
+        'The moon and a curious mind': 'The moon sings to the backdrop of a thousand radiating stars.\nShining light on the bold face of a driven heart.\n“What drives us humans apart?”\nSoft spoken, he asks the bright rock.\n“Is it the greed or the pride that we harbor in our hearts?”\n“Or is it the bitterness that we carry from our past?”\nSilent, the moon stays afar.\n“Another curious mind walks among them”\nThe moon declares to the stars.\n“Your hearts carry immense greed.\nThat is not the only invisible enemy.”\n“Division is the seed of resentment, can’t you see.\nA world divided can’t garner peace”\n“This is one of the answers that you seek.The rest is a mystery.”\n',
+        'My reality':"Why do you let weakness haunt you?\nIs it a sad lie or just an ugly truth?\nYou wanna fly, but you’re too scared to die.\nSo you get high, close your eyes and pray to god.\nWhen will you realize?\nYour hands can make any dream come alive. \nWishes alone don’t turn dreams into reality. \nAs you listen to me, do you feel this energy?\nStruggle is just another part of our journey.\nI know where this path leads.\nGreatness eagerly awaits me. \nI’m just being honest, can’t you see?\nMediocrity wasn’t meant for me.\nThis is my reality.\nLegendary is the life I seek.\nAm I being too cocky when I speak?\nSaying that I can change this crazy world in front of me."};
+    
+    const PoemContainer = styled.div`
+        border-bottom: 1px solid white;`;
+    
+    const PoemHeader = styled.div`
+        font-size:25px;
+        display: flex;
+        align-items:center;
+        padding: 0.5em;
+        cursor: pointer;`;
+    
+    const PoemText = styled.p`
+        text-align: left;
+        font-size: 18px;
+        background-color: white;
+        color:black;
+        padding: 10px;`
     const live = [
         {
             title: 'Portfolio Website',
@@ -114,7 +144,25 @@ function ContentHouse({setState}){
                     <h2 className="content_heading">
                             Poems
                     </h2>
-                    <PoemList/>
+                    <div className="poem_wrapper">
+                        <div className="poem_cont">
+                            {Object.keys(poems).map((poem)=>{
+                                return(<PoemContainer key={poem}>
+                                    <PoemHeader onClick={(event)=> {
+                                        event.stopPropagation();  // this stops the event from bubbling up
+                                        togglePoem(poem);
+                                    }}>
+                                        {selectedPoem===poem? <FaCaretDown/> : <FaCaretRight/>}
+                                        {poem}
+                                    </PoemHeader>
+                                    {selectedPoem===poem && <PoemText>
+                                        {poems[poem].split('\n').map((line, i) => <p key={i}>{line}<br/></p>)}
+                                    </PoemText>}
+                                </PoemContainer>);
+                            })}
+                        </div>
+                    </div>
+                    {/* <PoemList/> */}
                     <h2 className="content_heading">
                             Illustrations
                     </h2>

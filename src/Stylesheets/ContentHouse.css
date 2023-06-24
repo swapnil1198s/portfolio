@@ -18,8 +18,9 @@
 .content_heading{
     font-size: 25px;
     margin-top: 0px;
-    padding-top: 2vh;
-    margin-bottom: 2vh;
+    padding: 2vh;
+    margin-bottom: 1vh;
+    background-color: black;
 }
 .main_content_heading{
     font-size: 4vh;
@@ -78,13 +79,13 @@
 }
 .collapsed{
     padding: 1vw;
-    background-color: rgb(13, 13, 53);
+    background-color: rgb(60, 0, 117);
     color: white;
     margin: 0px 2px 2px 2px;
     border-radius: 0px 0px 5px 5px;
 }
 .collapsed p{
-    font-size: 15px;
+    font-size: 20px;
 }
 .collapsed h2{
     font-size: 18px;
@@ -96,7 +97,7 @@
     text-align: left;
 }
 .expanded{
-    background-color: rgb(13, 13, 53);
+    background-color: rgb(117, 0, 68);
     color: white;
     margin: 0px 2px 2px 2px;
     border-radius: 0px 0px 5px 5px;
