@@ -1,0 +1,217 @@
+.tracker{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(../images/wallpaper.jpeg);
+    background-size: 100%;
+    background-position: top;
+}
+#title{
+    color: white;
+    text-align: right;
+}
+.timerCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ticker{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2vh 2vh 2vh;
+    background-color: rgba(255, 255, 255, 0.555);
+    padding: 1vh 1vw;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 2vh 1vh;
+    width: 3vw;
+    height: 3vw;
+}
+
+.startBtn{
+    background-image: url(../images/start_btn.png);
+    width:100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+.stopBtn{
+    background-image: url(../images/stop_btn.png);
+    width:80%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+
+.startBtn:hover, .stopBtn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.timer{
+    font-size: 1.5vw;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+    background-color: rgba(112, 226, 236, 0.635);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 10vw;
+}
+.logContainer{
+    height: 100vh;
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.474);
+    margin: 2vh 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logRow{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 50%;
+}
+.project{
+    width:20vw;
+    border-radius: 5px;
+    margin: 1vh 2vw;
+    padding: 1vh;
+}
+.projectDdwn{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(0, 88, 176);
+    color: white;
+    font-weight: bold;
+}
+.task{
+    width: 100%;
+    text-align: center;
+}
+.project{
+    background-color: rgb(255, 255, 159);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projectAdd{
+    background-color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 1vh;
+    margin: 1vh;
+    border: 1px solid black;
+}
+
+.projectAdd:hover, .projectDdwn:hover{
+    cursor: pointer;
+}
+
+#subTitle{
+    font-size: 30px;
+    color: white;
+    margin-top:0;
+}
+.dayDropdown{
+    width: 100%;
+    text-align: center;
+}
+.charts{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.pieCont{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.barCont{
+    width: 90%;
+    max-height: 45%;
+    padding: 10px;
+    margin-top: 2vh;
+}
+.chartHead{
+    color: white;
+    text-align: center;
+    margin: 0;
+    background-color: rgb(50, 50, 50);
+    padding: 5px;
+}
+@media (max-width:650px){
+    .timerCont{
+        width: 100%;
+    }
+    #title{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        background-color: rgba(59, 59, 59, 0.543);
+        margin-top: 0;
+        padding-top: 1vh;
+    }
+    #subTitle{
+        font-size: 20px;
+        color: white;
+        margin-top:0;
+    }
+    .ticker{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0.555);
+        width: 80vw;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin: 2vh 1vh;
+        width: 5vh;
+        height: 5vh;
+    }
+    .timer{
+        font-size: 2vh;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+        background-color: rgba(112, 226, 236, 0.635);
+        color: rgb(0, 0, 0);
+        border-radius: 5px;
+        width: 40%;
+    }
+    .project{
+        width:70%;
+        border-radius: 5px;
+        margin: 1vh 2vw;
+        padding: 1vh;
+    }
+    .logContainer{
+        width: 90vw;
+        overflow-y: scroll;
+        justify-content: none;
+    }
+    .logRow{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .charts{
+        width: 95%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+    }
+}

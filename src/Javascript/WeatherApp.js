@@ -3,7 +3,6 @@ import axios from "axios";
 import PlacesAutocomplete , { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import "../Stylesheets/WeatherApp.css"
 import { FaArrowLeft } from "react-icons/fa";
-import moment from 'moment-timezone';
 
 const WeatherApp = ({setState}) => {
     const [adress, setAdress] = useState("");
