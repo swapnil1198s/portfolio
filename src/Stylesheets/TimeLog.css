@@ -68,4 +68,10 @@
         padding: 10px;
         height: 50vh;
     }
+    #logTitle{
+        font-size: 25px;
+    }
+    .logItem{
+        overflow-x: scroll;
+    }
 }

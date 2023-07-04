@@ -6,6 +6,11 @@ import BarChartComp from "./BarChartComp";
 import {FaArrowLeft} from 'react-icons/fa';
 
 const Tracker = ({setState}) => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const dummyLog = [
         {time: 100, task: 'Task A', project:'Project A', Day: 'Monday'},
         {time: 200, task: 'Task A', project:'Project B', Day: 'Tuesday'},
