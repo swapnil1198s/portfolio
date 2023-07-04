@@ -12,6 +12,8 @@ import py2 from "../images/newplot.png";
 import py3 from "../images/opteamal.png";
 import dtSt from "../images/dtSt.jpeg";
 import at from "../images/at.png"
+import weatherAppImage from "../images/weatherAppImage.png";
+import prodImage from "../images/prodImage.png"
 import styled from "styled-components";
 
 function ContentHouse({setState}){
@@ -51,6 +53,18 @@ function ContentHouse({setState}){
             preview: web1,
             source: 'https://github.com/swapnil1198s/portfolio',
             description: 'This is a website built using the MERN stack. The purpose of this website is to showcase a variety of products built by yours truly.'
+        },
+        {
+            title: 'Weather App',
+            preview: weatherAppImage,
+            source: 'https://github.com/swapnil1198s/Weather-App',
+            description: 'An app utilizing openweathermap API to display 24hour weather for any location.'
+        },
+        {
+            title: 'Productivity Manager',
+            preview: prodImage,
+            source: 'https://github.com/swapnil1198s/productivity_manager',
+            description: 'An app that enables users to record tasks using a timer and categorize them based on projects. Additionally, providing data visualization on logged tasks using pie charts and bar graphs.'
         },
     ]
     const games = [

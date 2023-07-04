@@ -92,11 +92,17 @@ function About({setState}){
                                 </p>
                                 <h1 className="bg_headings">The Current Goal</h1>
                                 <p>
-                                    Since my strengths are Software Enginnering, Human-Centered Computing, and Full-Stack development, I want to get experience with some live and new projects.
+                                    The next couple of years are all about gaining and strengthening skills that form the foundation of a great engineer. I would like to master the art of creating products that are technically sound and 
+                                    empower the humans that use them. Since my strengths are Software Enginnering, Human-Centered Computing, and Full-Stack development, I want to grow skills by working on deployed systems as well as new systems.
                                     The goal is to get some experience with large software projects such that I can deepen the knowledge needed for 
-                                    good software architecture, development, and deployment. 
+                                    good software architecture, development, and deployment. This sets up the stage to have meaningful contributions in the Space Industry.
                                 </p>
                                 <h1 className="bg_headings">My Interests</h1>
+                                <p>
+                                    Going on mountain adventures and playing with my dog is the best. Playing basketball and soccer satisfies my competitive spirit. Learning new languages is fun as well. Right now
+                                    I am learning Japanese. I have recently acquired a liking for growing vegitables, herbs, and flowers. I also make robots. Currently, I am the robotics coach for the Colleton County High 
+                                    School's robotics team. 
+                                </p>
                             </div>
                         </div>
                         <div className="se_cont">
